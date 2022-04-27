@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<AuthorizeView Roles="Administrador">
+    <Authorized Context="AuthenticationState">
+        <h1 style = "color:red;">Bienvenido Administrador</h1>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Usuario">
+    <Authorized Context="AuthenticationState">
+        <h1 style = "color:red;">Bienvenido Usuario</h1>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <h2 style = "color:red;">Debe Identificarse</h2>
+    </NotAuthorized> 
+</AuthorizeView>
